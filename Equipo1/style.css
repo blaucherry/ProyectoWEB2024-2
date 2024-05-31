@@ -87,6 +87,13 @@ body{
     width: auto; 
 }
 
+.integrantes p {
+    font-size: 0.8rem;  
+    color: #2C7865;   
+    margin: 2px 20px 2px 0; 
+    white-space: nowrap; 
+    align-self: center; }
+    
 .titulo-principal {
     flex-grow: 1; 
     text-align: center; 

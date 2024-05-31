@@ -75,7 +75,7 @@ nav a:hover{
 }
 
 .aclaraciones {
-    background-color: var(--secondary-color);
+    background-color: var(--primary-color);
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -94,15 +94,43 @@ nav a:hover{
 .aclaraciones li {
     margin-bottom: 10px;
     border-left: 5px solid var(--contrast-color);
+    padding: 20px;
+}
+.parrafo {
+    background-color: var(--primary-color); 
+    color: var(--dark-color); 
+    padding: 20px; 
+    margin-bottom: 40px; 
+    text-align: center;
+}
+
+.parrafo h2 {
+    color: var(--contrast-color);
+    margin-bottom: 20px;
+}
+
+.parrafo ul {
+    list-style: none;
+}
+
+.parrafo li {
+    margin-bottom: 10px;
+    border-right: 5px solid var(--contrast-color);
     padding: 10px;
 }
 
-footer {
-    text-align: center;
-    padding: 20px;
-    background-color: var(--primary-color);
-    color: var(--background-color);
+.parrafo li:hover{
+    color: var(--backgrounds-color);
+    text-decoration: underline;
 }
+
+footer {
+    background-color: var(--contrast-color); /* Nuevo color de fondo para el footer */
+    color: var(--background-color); /* Cambio del color del texto para contraste */
+    padding: 20px;
+    margin-top: 20px; /
+}
+
 
 footer p {
     opacity: 0.8;
