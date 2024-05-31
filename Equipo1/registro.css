@@ -23,50 +23,51 @@ body {
     color: var(--dark-color);
 }
 
-header{
-    background-color: #AFC8AD;
+header {
+    background-color: var(--primary-color);
     padding: 20px 0;
+    text-align: center;
 }
 
 .caja {
-    display: flex; 
-    justify-content: space-between; 
-    align-items: center; 
-    width: 100%; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
 }
 
 .logo img {
-    height: 100px; 
+    height: 100px;
 }
 
 nav {
-    position: static; 
+    position: static;
 }
 
 nav ul {
-    padding: 0; 
     list-style: none;
+    display: flex;
+    justify-content: center;
 }
 
 nav li {
-    display: inline; 
-    margin: 0 10px; 
+    margin: 0 15px;
 }
 
 nav a {
     text-decoration: none;
-    color: #2C7865;
+    color: var(--contrast-color);
     font-weight: bold;
     text-transform: uppercase;
-    white-space: nowrap;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
 }
 
-
-nav a:hover{
+nav a:hover {
     color: var(--backgrounds-color);
     text-decoration: underline;
-
 }
+
 .main {
     padding: 20px;
     width: 80%;

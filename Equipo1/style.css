@@ -11,42 +11,22 @@
 
 @media (max-width: 768px) {
     #banner {
-        max-width: 100%; 
+        max-width: 100%; /* Hace que la imagen sea más grande en dispositivos pequeños */
     }
     body {
-        font-size: 0.8rem; 
+        font-size: 0.8rem; /* Disminuye el tamaño del texto en dispositivos pequeños */
     }
 }
 
 html{
     font-size: 18px;
     font-family: 'Poppins', sans-serif; 
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100%;
-    box-sizing: border-box; 
-    background-color: #AFC8AD;
-    
 }
-header {
-    width: 100%;
-    box-sizing: border-box; 
-    background-color: #AFC8AD;
-    text-align: center;
-}
-
 
 
 body{
     background-color: var(--background-color);
-     line-height: 1.6; 
-    font-size: 16px; 
-    }
-    
-   
-    
-
+}
 
 
 #banner {
@@ -118,16 +98,17 @@ nav a {
 }
 
 nav a:hover {
-    color: var(--backgrounds-color);
+    color: var(--opasity-color);
     text-decoration: underline;
 }
 
 
-h1, h2, h3 {
-    font-weight: bold; 
+p{text-align: center;}
+    
+
+em strong{
+    color: var(--contrast-color);
 }
-
-
 
 #mision{
     font-size: 20px;
