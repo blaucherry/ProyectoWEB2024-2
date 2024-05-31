@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+:root{
+    --primary-color: #AFC8AD;
+    --background-color: #F2F1EB;
+    --backgrounds-color: #F2F1FF;
+    --dark-color: #0000;  
+    --opasity-color: #75A47F;
+    --contrast-color: #2C7865;
+}
+
+@media (max-width: 768px) {
+    #banner {
+        max-width: 100%; /* Hace que la imagen sea más grande en dispositivos pequeños */
+    }
+    body {
+        font-size: 0.8rem; /* Disminuye el tamaño del texto en dispositivos pequeños */
+    }
+}
+
+html{
+    font-size: 18px;
+    font-family: 'Poppins', sans-serif; 
+}
+
+
+body{
+    background-color: var(--background-color);
+}
+
+
+#banner {
+    position: relative;
+    width: 100%;
+    height: 400px; /* Ajusta esto según la altura deseada */
+    overflow: hidden;
+}
+
+#banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Asegura que la imagen cubra completamente el contenedor */
+}
+
+#banner .gradient {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.2) 50%, rgba(0,0,0,1) 100%);
+}
+
+.titulo-principal{
+    text-align: center;
+}
+.caja {
+    display: flex;
+    align-items: center; 
+    justify-content: space-between; 
+    flex-wrap: wrap; 
+    padding: 0 20px; 
+}
+
+.logo img {
+    height: 100px; 
+    width: auto; 
+}
+
+.titulo-principal {
+    flex-grow: 1; 
+    text-align: center; 
+    margin: 0 20px; 
+}
+
+nav {
+    display: flex; 
+    align-items: center;
+}
+
+nav ul {
+    display: flex; 
+    padding: 0;
+    margin: 0;
+    list-style: none; /
+}
+
+nav li {
+    margin: 0 10px; 
+}
+
+nav a {
+    text-decoration: none;
+    color: #2C7865;
+    font-weight: bold;
+    text-transform: uppercase;
+    white-space: nowrap; 
+}
+
+
+p{text-align: center;}
+    
+
+em strong{
+    color: var(--contrast-color);
+}
+
+#mision{
+    font-size: 20px;
+}
+
+.principal{
+    background: var(--background-color);
+    text-align: center;
+}
+
+.diferenciales{
+    background: var(--background-color);
+    
+    
+}
+
+ul{
+    
+    display: inline-block;
+    vertical-align: top;
+    width: 20%;
+    margin-right: 15%;
+
+}
+
+.imageDiferenciales{
+    object-fit:scale-down;
+    width: 30%;
+    
+}
+
+.titulo-centralizado{
+    text-transform: uppercase;
+    text-align: center;
+}
+

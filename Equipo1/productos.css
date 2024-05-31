@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+:root{
+    --primary-color: #AFC8AD;
+    --background-color: #F2F1EB;
+    --backgrounds-color: #F2F1FF;
+    --dark-color: #0000;  
+    --opasity-color: #75A47F;
+    --contrast-color: #2C7865;
+}
+
+
+html{
+    font-size: 75%;
+    font-family: 'Poppins', sans-serif; 
+    
+}
+
+header{
+    background-color: #AFC8AD;
+    padding: 20px 0;
+}
+
+.caja {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    width: 100%; 
+}
+
+.logo img {
+    height: 100px; 
+}
+
+nav {
+    position: static; 
+}
+
+nav ul {
+    padding: 0; 
+    list-style: none;
+}
+
+nav li {
+    display: inline; 
+    margin: 0 10px; 
+}
+
+nav a {
+    text-decoration: var(--backgrounds-color); 
+    color: #2C7865; 
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.productos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box; 
+}
+
+.productos li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 30%; 
+    margin-bottom: 20px; 
+    margin: 0 1.5%;
+    background-color: var(--primary-color);
+    padding: 30px 20px;
+    box-sizing: border-box;
+    
+}
+
+.productos img {
+    width: 100%; 
+    height: auto; 
+    max-height: 200px; 
+    object-fit: cover; 
+}
+
+.productos h2 {
+    font-size: 24px; 
+    margin: 10px 0;
+}
+
+.producto-descripcion {
+    font-size: 18px;
+}
+
+.producto-precio {
+    font-size: 20px;
+    margin-top: 5px;
+    font-weight: bold;
+}
