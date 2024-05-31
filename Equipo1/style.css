@@ -141,29 +141,55 @@ h1, h2, h3 {
 }
 
 .principal{
-    background: var(--background-color);
-    text-align: center;
+    background-color: #AFC8AD;
+    padding: 40px;
+    margin: 40px auto;
+    width: 93%; 
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
 }
 
 .diferenciales{
+    display: flex;
+    flex-direction: column; /* Organiza los elementos en una columna */
+    align-items: center; /* Centra los elementos horizontalmente */
+    justify-content: center; /* Centra los elementos verticalmente */
     background: var(--background-color);
-    
-    
+    padding: 20px 0; /* Agrega padding vertical para espacio alrededor del contenido */
 }
 
 ul{
     
-    display: inline-block;
-    vertical-align: top;
-    width: 20%;
-    margin-right: 15%;
+    display: block; /* Hace que la lista ocupe toda la línea */
+    text-align: center; /* Alinea el texto de los items al centro */
+    width: 100%; /* Permite que la lista ocupe todo el ancho disponible */
+    padding: 0;
+    margin: 20px 0; /* Añade espacio arriba y abajo de la lista */
 
 }
 
-.imageDiferenciales{
+ul li.items {
+    display: inline-block;
+    margin: 10px;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    background-color: white; /* Define un color de fondo inicial */
+    transition: background-color 0.3s; /* Cambia 'primary-color' a 'background-color' */
+}
+
+ul li.items:hover {
+    background-color: var(--primary-color); /* Color de fondo cambia a primary-color cuando el mouse está encima */
+}
+
+.imageDiferenciales {
+    display: block; /* Asegura que la imagen sea tratada como un bloque para permitir el centrado */
+    height: auto; /* Mantiene la proporción de la imagen ajustando su altura automáticamente */
+    margin: 20px auto; /* Centra la imagen horizontalmente con margen automático y añade espacio vertical */
     object-fit:scale-down;
     width: 30%;
-    
+	box-shadow: 0 4px 8px rgba(0,0,0,0.3);
 }
 
 .titulo-centralizado{
