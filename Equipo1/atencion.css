@@ -15,11 +15,18 @@ body, h1, h2, ul, li {
     padding: 0;
 }
 
+html, body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
 body {
     font-family: 'Poppins', sans-serif;
     background-color: var(--background-color);
     line-height: 1.6;
     color: var(--dark-color);
+    flex: 1;
 }
 
 header{
@@ -60,18 +67,16 @@ nav a {
     white-space: nowrap;
 }
 
-
-nav a:hover{
+nav a:hover {
     color: var(--backgrounds-color);
     text-decoration: underline;
-
 }
-
 
 .main {
     padding: 20px;
     width: 80%;
     margin: 20px auto;
+    flex: 1;
 }
 
 .aclaraciones {
@@ -96,6 +101,7 @@ nav a:hover{
     border-left: 5px solid var(--contrast-color);
     padding: 20px;
 }
+
 .parrafo {
     background-color: var(--primary-color); 
     color: var(--dark-color); 
@@ -119,18 +125,33 @@ nav a:hover{
     padding: 10px;
 }
 
-.parrafo li:hover{
+.parrafo li:hover {
     color: var(--backgrounds-color);
     text-decoration: underline;
 }
 
+
 footer {
-    background-color: var(--contrast-color); /* Nuevo color de fondo para el footer */
-    color: var(--background-color); /* Cambio del color del texto para contraste */
+    background-color: var(--contrast-color); 
+    color: var(--background-color); 
     padding: 20px;
-    margin-top: 20px; /
+    text-align: center;
+    margin-top: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
+.footer-content {
+    display: flex;
+    align-items: center;
+}
+
+.footer-logo {
+    width: 50px;
+    height: auto;
+    margin-right: 10px;
+}
 
 footer p {
     opacity: 0.8;
