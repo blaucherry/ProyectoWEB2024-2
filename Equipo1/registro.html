@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Registro</title>
+    <link rel="stylesheet" href="registro.css">
+</head>
+<body>
+    <header>
+        <h1>ECObst: Fruteria Fresca</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="productos.html">Productos</a></li>
+                <li><a href="registro.html" class="active">Regístrate</a></li>
+                <li><a href="atencion.html">Aclaraciones</a></li>
+                <li><a href="blog.html">Blog</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="formulario-registro">
+            <h2>Crea tu cuenta</h2>
+            <form action="/submit-your-form-handler" method="POST">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="password">Contraseña:</label>
+                <input type="password" id="password" name="password" required>
+
+                <label for="confirm-password">Confirmar Contraseña:</label>
+                <input type="password" id="confirm-password" name="confirm-password" required>
+
+                <button type="submit">Registrar</button>
+            </form>
+        </div>
+    </main>
+
+   
+</body>
+</html>

@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+:root {
+    --primary-color: #AFC8AD;
+    --secondary-color: #bbe0c0;
+    --background-color: #F2F1EB;
+    --backgrounds-color: #F2F1FF;
+    --dark-color: #000000;  
+    --opacity-color: #75A47F;
+    --contrast-color: #2C7865;
+}
+
+/* Reset básico para algunos elementos */
+body, h1, h2, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--background-color);
+    line-height: 1.6;
+    color: var(--dark-color);
+}
+
+header {
+    background-color: var(--primary-color);
+    padding: 20px 0;
+    text-align: center;
+}
+
+.caja {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.logo img {
+    height: 100px;
+}
+
+nav {
+    position: static;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav li {
+    margin: 0 15px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--contrast-color);
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: var(--backgrounds-color);
+    text-decoration: underline;
+}
+
+.main {
+    padding: 20px;
+    width: 80%;
+    margin: 20px auto;
+}
+
+.aclaraciones {
+    background-color: var(--secondary-color);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+.aclaraciones h2 {
+    color: var(--contrast-color);
+    margin-bottom: 20px;
+}
+
+.aclaraciones ul {
+    list-style: none;
+}
+
+.aclaraciones li {
+    margin-bottom: 10px;
+    border-left: 5px solid var(--contrast-color);
+    padding: 10px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: var(--primary-color);
+    color: var(--background-color);
+}
+
+footer p {
+    opacity: 0.8;
+}
