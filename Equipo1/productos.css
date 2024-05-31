@@ -2,6 +2,7 @@
 
 :root{
     --primary-color: #AFC8AD;
+    --secundary-color: #bbe0c0;
     --background-color: #F2F1EB;
     --backgrounds-color: #F2F1FF;
     --dark-color: #0000;  
@@ -51,6 +52,14 @@ nav a {
     color: #2C7865; 
     font-weight: bold;
     text-transform: uppercase;
+    font-size: 1.5rem;
+}
+
+
+nav a:hover{
+    color: var(--backgrounds-color);
+    text-decoration: underline;
+
 }
 
 .productos {
@@ -70,10 +79,11 @@ nav a {
     width: 30%; 
     margin-bottom: 20px; 
     margin: 0 1.5%;
-    background-color: var(--primary-color);
+    background-color:var(--secundary-color);
     padding: 30px 20px;
     box-sizing: border-box;
-    
+    border: 2px solid var(--dark-color);
+    border-radius: 10px 25px 40px 50px;
 }
 
 .productos img {
@@ -83,9 +93,22 @@ nav a {
     object-fit: cover; 
 }
 
+.productos li:hover{
+    border-color: var(--backgrounds-color);
+}
+
+.productos li:activate{
+    border-color: var(--contrast-color);
+}
+
 .productos h2 {
     font-size: 24px; 
     margin: 10px 0;
+    font-weight: bold; 
+}
+
+.productos li:hover h2{
+    font-size: 30px;
 }
 
 .producto-descripcion {

@@ -94,7 +94,12 @@ nav a {
     color: #2C7865;
     font-weight: bold;
     text-transform: uppercase;
-    white-space: nowrap; 
+    white-space: nowrap;
+}
+
+nav a:hover {
+    color: var(--opasity-color);
+    text-decoration: underline;
 }
 
 
