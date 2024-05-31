@@ -60,4 +60,4 @@ Si tienes alguna pregunta o necesitas ayuda, no dudes en contactarnos
 
 ---
 
-© 2024 Tu Sitio. Todos los derechos reservados.
+© 2024 ECOBst. Todos los derechos reservados.
