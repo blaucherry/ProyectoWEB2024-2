@@ -23,51 +23,50 @@ body {
     color: var(--dark-color);
 }
 
-header {
-    background-color: var(--primary-color);
+header{
+    background-color: #AFC8AD;
     padding: 20px 0;
-    text-align: center;
 }
 
 .caja {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    width: 100%; 
 }
 
 .logo img {
-    height: 100px;
+    height: 100px; 
 }
 
 nav {
-    position: static;
+    position: static; 
 }
 
 nav ul {
+    padding: 0; 
     list-style: none;
-    display: flex;
-    justify-content: center;
 }
 
 nav li {
-    margin: 0 15px;
+    display: inline; 
+    margin: 0 10px; 
 }
 
 nav a {
     text-decoration: none;
-    color: var(--contrast-color);
+    color: #2C7865;
     font-weight: bold;
     text-transform: uppercase;
-    font-size: 1.2rem;
-    transition: color 0.3s ease;
+    white-space: nowrap;
 }
 
-nav a:hover {
+
+nav a:hover{
     color: var(--backgrounds-color);
     text-decoration: underline;
-}
 
+}
 .main {
     padding: 20px;
     width: 80%;
