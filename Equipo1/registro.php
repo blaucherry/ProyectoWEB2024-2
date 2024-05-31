@@ -1,8 +1,8 @@
 <?php
 // Configuración de la base de datos
 $servername = "localhost";
-$username = "root"; // Cambia esto si tu usuario de MySQL es diferente
-$password = "labaspechuspechus"; // Cambia esto si tienes una contraseña para tu usuario de MySQL
+$username = "root";
+$password = "labaspechuspechus"; 
 $dbname = "ecobstDB";
 
 // Crear conexión
@@ -10,7 +10,7 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 
 // Verificar conexión
 if ($conn->connect_error) {
-    die("Conexión fallida: " . $conn->connect_error);
+    die("<div class='message error'>Conexión fallida: " . $conn->connect_error . "</div>");
 }
 
 // Obtener datos del formulario
@@ -21,20 +21,28 @@ $confirm_contrasena = $_POST['confirm-password'];
 
 // Verificar si las contraseñas coinciden
 if ($contrasena !== $confirm_contrasena) {
-    die("Las contraseñas no coinciden.");
+    echo "<div class='message error'>Las contraseñas no coinciden.</div>";
+    exit();
 }
 
-// Encriptar la contraseña
-$contrasena_encriptada = password_hash($contrasena, PASSWORD_DEFAULT);
+// Verificar si el correo ya existe
+$sql = "SELECT * FROM USUARIO WHERE correo_usuario = '$email'";
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0) {
+    echo "<div class='message error'>Ya existe un usuario con ese correo.</div>";
+    exit();
+}
+
 
 // Insertar nuevo usuario en la base de datos
 $sql = "INSERT INTO USUARIO (nombre_usuario, correo_usuario, contrasena_usuario)
-VALUES ('$nombre', '$email', '$contrasena_encriptada')";
+        VALUES ('$nombre', '$email', '$contrasena')";
 
 if ($conn->query($sql) === TRUE) {
-    echo "Registro exitoso";
+    echo "<div class='message success'>Registro exitoso</div>";
 } else {
-    echo "Error: " . $sql . "<br>" . $conn->error;
+    echo "<div class='message error'>Error al registrar, contacte a soporte.</div>";
 }
 
 // Cerrar conexión

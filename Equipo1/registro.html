@@ -2,27 +2,50 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Registro</title>
+    <title>ECObst: Registro</title>
     <link rel="stylesheet" href="registro.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+        .message {
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+        .message.success {
+            background-color: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+        .message.error {
+            background-color: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+    </style>
 </head>
 <body>
     <header>
-        <h1>ECObst: Fruteria Fresca</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="productos.html">Productos</a></li>
-                <li><a href="registro.html" class="active">Regístrate</a></li>
-                <li><a href="atencion.html">Aclaraciones</a></li>
-                <li><a href="blog.html">Blog</a></li>
-            </ul>
-        </nav>
+        <div class="caja">
+            <div class="logo">
+                <img src="image/logo.png" alt="Logo">
+            </div>
+            <h1 class="titulo-principal">ECObst: Fruteria Fresca</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="productos.html">Top Ventas</a></li>
+                    <li><a href="registro.html" class="active">Regístrate</a></li>
+                    <li><a href="atencion.html">Aclaraciones</a></li>
+                    <li><a href="index.html#blog">Blog</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
     <main>
         <div class="formulario-registro">
             <h2>Crea tu cuenta</h2>
-            <form action="registro.php" method="POST">
+            <form id="registro" method="POST">
                 <label for="nombre">Nombre:</label>
                 <input type="text" id="nombre" name="nombre" required>
 
@@ -35,9 +58,26 @@
                 <label for="confirm-password">Confirmar Contraseña:</label>
                 <input type="password" id="confirm-password" name="confirm-password" required>
 
-                <button type="submit">Registrar</button>
+                <button type="button" id="registrar">Registrar</button>
             </form>
+            <div id="resultado"></div>
         </div>
     </main>
+
+    <script>
+        $("#registrar").click(function(){
+            $.ajax({
+                url: "registro.php",
+                type: "POST",
+                data: $("#registro").serialize(),
+                success: function(resultado){
+                    $("#resultado").html(resultado);
+                    if (resultado.includes("Registro exitoso")) {
+                        $("#registro")[0].reset();
+                    }
+                }
+            });
+        });
+    </script>
 </body>
 </html>
