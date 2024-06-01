@@ -122,7 +122,22 @@
                 <p>&copy; 2024 ECOBst. Todos los derechos reservados.</p>
             </div>
         </footer>
-       
+     
+
+    <!--Función JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var principalElement = document.querySelector('.principal');
+
+            principalElement.addEventListener('mouseover', function() {
+                this.style.boxShadow = "0 4px 8px rgba(0,0,0,1.0)";
+            });
+
+            principalElement.addEventListener('mouseout', function() {
+                this.style.boxShadow = "0 4px 8px rgba(0,0,0,0.3)";
+            });
+        });
+    </script>	 
 
     </body>
 
